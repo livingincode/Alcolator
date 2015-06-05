@@ -34,7 +34,7 @@
                                 <rect key="frame" x="14" y="66" width="572" height="31"/>
                             </slider>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="???" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="j5M-UC-ca3">
-                                <rect key="frame" x="31" y="157" width="538" height="33"/>
+                                <rect key="frame" x="244" y="157" width="113" height="33"/>
                                 <fontDescription key="fontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="30"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
@@ -45,16 +45,26 @@
                         <constraints>
                             <constraint firstItem="j5M-UC-ca3" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="15" id="2fq-R2-BxN"/>
                             <constraint firstItem="6WB-wa-n5c" firstAttribute="width" secondItem="A7y-T9-P0z" secondAttribute="width" id="49F-Ig-abO"/>
+                            <constraint firstItem="I1D-05-egL" firstAttribute="width" secondItem="j5M-UC-ca3" secondAttribute="width" id="7M2-XJ-GJ3"/>
                             <constraint firstItem="6WB-wa-n5c" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="8" id="96Y-5E-X9u"/>
+                            <constraint firstItem="j5M-UC-ca3" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="54" id="J8X-ax-FNf"/>
                             <constraint firstItem="A7y-T9-P0z" firstAttribute="top" secondItem="6WB-wa-n5c" secondAttribute="bottom" constant="8" id="Jma-wY-XW6"/>
                             <constraint firstItem="j5M-UC-ca3" firstAttribute="top" secondItem="I1D-05-egL" secondAttribute="bottom" constant="8" id="KRO-ds-HMf"/>
                             <constraint firstItem="6WB-wa-n5c" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="NT8-mV-Gb7"/>
                             <constraint firstItem="I1D-05-egL" firstAttribute="centerX" secondItem="A7y-T9-P0z" secondAttribute="centerX" id="XhK-Hf-ED9"/>
+                            <constraint firstItem="I1D-05-egL" firstAttribute="centerX" secondItem="j5M-UC-ca3" secondAttribute="centerX" id="eVd-hs-0BC"/>
                             <constraint firstAttribute="trailingMargin" secondItem="j5M-UC-ca3" secondAttribute="trailing" constant="15" id="l8U-vs-xAm"/>
                             <constraint firstItem="6WB-wa-n5c" firstAttribute="centerX" secondItem="A7y-T9-P0z" secondAttribute="centerX" id="ozf-3c-2zm"/>
                             <constraint firstItem="6WB-wa-n5c" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="uzk-8u-K11"/>
                             <constraint firstItem="I1D-05-egL" firstAttribute="top" secondItem="A7y-T9-P0z" secondAttribute="bottom" constant="8" id="zuT-an-yeA"/>
                         </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="2fq-R2-BxN"/>
+                                <exclude reference="J8X-ax-FNf"/>
+                                <exclude reference="l8U-vs-xAm"/>
+                            </mask>
+                        </variation>
                         <connections>
                             <outletCollection property="gestureRecognizers" destination="QJg-dS-L9R" appends="YES" id="A0G-0R-k2p"/>
                         </connections>
