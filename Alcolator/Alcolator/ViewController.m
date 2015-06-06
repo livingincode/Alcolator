@@ -39,6 +39,8 @@
 - (IBAction)sliderValueDidChange:(UISlider *)sender {
     NSLog(@"Slider value changed to %f", sender.value);
        [self.beerPercentTextField resignFirstResponder];
+        int numberOfBeers = self.beerCountSlider.value;
+        self.wineNavigationBar.title = [NSString stringWithFormat:@"Wine (%.1f glasses)", [self calculateGlasses:numberOfBeers]];
     
 }
 
@@ -46,17 +48,9 @@
     [self.beerPercentTextField resignFirstResponder];
         // first, calculate how much alcohol is in all those beers...
         int numberOfBeers = self.beerCountSlider.value;
-        int ouncesInOneBeerGlass = 12;  //assume they are 12oz beer bottles
-        float alcoholPercentageOfBeer = [self.beerPercentTextField.text floatValue] / 100;
-        float ouncesOfAlcoholPerBeer = ouncesInOneBeerGlass * alcoholPercentageOfBeer;
-        float ouncesOfAlcoholTotal = ouncesOfAlcoholPerBeer * numberOfBeers;
-        // now, calculate the equivalent amount of wine...
-        float ouncesInOneWineGlass = 5;  // wine glasses are usually 5oz
-        float alcoholPercentageOfWine = 0.13;  // 13% is average
-        float ouncesOfAlcoholPerWineGlass = ouncesInOneWineGlass * alcoholPercentageOfWine;
-        float numberOfWineGlassesForEquivalentAlcoholAmount = ouncesOfAlcoholTotal / ouncesOfAlcoholPerWineGlass;
-        // decide whether to use "beer"/"beers" and "glass"/"glasses"
-        NSString *beerText;
+        float numberOfWineGlassesForEquivalentAlcoholAmount = [self calculateGlasses:numberOfBeers];
+    
+           NSString *beerText;
         if (numberOfBeers == 1) {
                 beerText = NSLocalizedString(@"beer", @"singular beer");
             } else {
@@ -78,6 +72,20 @@
 - (IBAction)tapGestureDidFire:(UITapGestureRecognizer *)sender {
 [self.beerPercentTextField resignFirstResponder];
 
+}
+- (float)calculateGlasses:(int)numberOfBeers{
+    int ouncesInOneBeerGlass = 12;  //assume they are 12oz beer bottles
+    float alcoholPercentageOfBeer = [self.beerPercentTextField.text floatValue] / 100;
+    float ouncesOfAlcoholPerBeer = ouncesInOneBeerGlass * alcoholPercentageOfBeer;
+    float ouncesOfAlcoholTotal = ouncesOfAlcoholPerBeer * numberOfBeers;
+    
+    // now, calculate the equivalent amount of wine...
+    float ouncesInOneWineGlass = 5;  // wine glasses are usually 5oz
+    float alcoholPercentageOfWine = 0.13;  // 13% is average
+    float ouncesOfAlcoholPerWineGlass = ouncesInOneWineGlass * alcoholPercentageOfWine;
+    float numberOfWineGlassesForEquivalentAlcoholAmount = ouncesOfAlcoholTotal / ouncesOfAlcoholPerWineGlass;
+    // decide whether to use "beer"/"beers" and "glass"/"glasses"
+    return numberOfWineGlassesForEquivalentAlcoholAmount;
 }
 
 @end
