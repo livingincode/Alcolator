@@ -17,8 +17,9 @@
 - (IBAction)sliderValueDidChange:(UISlider *)sender {
         NSLog(@"Slider value changed to %f", sender.value);
         int numberOfBeers = self.beerCountSlider.value;
-        self.whiskeyNavigationBar.title = [NSString stringWithFormat:@"Whiskey (%.1f shots)", [self calculateShots:numberOfBeers]];
         [self.beerPercentTextField resignFirstResponder];
+        self.navigationItem.title = [NSString stringWithFormat:@"Whiskey (%.1f shots)", [self calculateShots:(int) numberOfBeers]];
+    
     }
 
 

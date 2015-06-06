@@ -5,7 +5,7 @@
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
-        <!--Wine-->
+        <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
@@ -64,11 +64,8 @@
                             <constraint firstItem="6WB-wa-n5c" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="uzk-8u-K11"/>
                             <constraint firstItem="I1D-05-egL" firstAttribute="top" secondItem="A7y-T9-P0z" secondAttribute="bottom" constant="8" id="zuT-an-yeA"/>
                         </constraints>
-                        <connections>
-                            <outletCollection property="gestureRecognizers" destination="QJg-dS-L9R" appends="YES" id="A0G-0R-k2p"/>
-                        </connections>
                     </view>
-                    <navigationItem key="navigationItem" title="Wine" id="RFo-Ox-U2l"/>
+                    <navigationItem key="navigationItem" id="RFo-Ox-U2l"/>
                     <connections>
                         <outlet property="beerCountSlider" destination="A7y-T9-P0z" id="QXK-L1-gOK"/>
                         <outlet property="beerPercentTextField" destination="6WB-wa-n5c" id="RkA-7T-TuR"/>
@@ -76,15 +73,10 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
-                <tapGestureRecognizer id="QJg-dS-L9R">
-                    <connections>
-                        <action selector="tapGestureDidFire:" destination="BYZ-38-t0r" id="YeC-Mv-MI3"/>
-                    </connections>
-                </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="1052" y="-132"/>
         </scene>
-        <!--Whiskey-->
+        <!--Whiskey View Controller-->
         <scene sceneID="0kA-a6-VQz">
             <objects>
                 <viewController id="zuu-uq-Beg" customClass="WhiskeyViewController" sceneMemberID="viewController">
@@ -143,11 +135,8 @@
                             <constraint firstItem="MrQ-xL-mx7" firstAttribute="trailing" secondItem="myb-NV-dvH" secondAttribute="trailingMargin" id="iD1-1D-vPC"/>
                             <constraint firstItem="MrQ-xL-mx7" firstAttribute="centerX" secondItem="6CH-D2-egD" secondAttribute="centerX" id="reA-Cd-Xg8"/>
                         </constraints>
-                        <connections>
-                            <outletCollection property="gestureRecognizers" destination="apy-TV-gd2" appends="YES" id="ETo-Ev-lYd"/>
-                        </connections>
                     </view>
-                    <navigationItem key="navigationItem" title="Whiskey" id="Fuc-dU-Lj2"/>
+                    <navigationItem key="navigationItem" id="Fuc-dU-Lj2"/>
                     <connections>
                         <outlet property="beerCountSlider" destination="6CH-D2-egD" id="nvU-Hm-SxC"/>
                         <outlet property="beerPercentTextField" destination="MrQ-xL-mx7" id="sKo-am-No4"/>
@@ -155,7 +144,6 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="a9r-7j-KDU" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <tapGestureRecognizer id="apy-TV-gd2"/>
             </objects>
             <point key="canvasLocation" x="1052" y="613"/>
         </scene>
@@ -207,7 +195,6 @@
                     <navigationItem key="navigationItem" title="Select Alcolator" id="yGf-RY-cFw"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wsl-GG-JsP" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <tapGestureRecognizer id="T4E-XZ-NfJ"/>
             </objects>
             <point key="canvasLocation" x="415" y="-132"/>
         </scene>
